@@ -30,14 +30,62 @@
       padding: 0 1.5rem;
     }
 
-    h1 {
+    /* ——— НОВЫЕ СТИЛИ ДЛЯ ЦВЕТНЫХ БЛОКОВ ЗАГОЛОВКА, ОГЛАВЛЕНИЯ И ВВЕДЕНИЯ ——— */
+    .hero-block {
+      background: #fff8f3;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #f2e9e4;
       text-align: center;
+    }
+    .toc-block {
+      background: #f0f6ff;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e0e8f0;
+    }
+    .introduction-block {
+      background: #f9f6ff;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e6e0f0;
+    }
+    .hero-block .content-img {
+      margin: 1.8rem auto;
+    }
+    .hero-block h1 {
+      margin: 1.6rem 0 0;
+      color: #5a4a66;
       font-size: 2.3rem;
-      margin: 2.2rem 0 1.8rem;
-      color: #4a4245;
       font-weight: 700;
       line-height: 1.25;
     }
+    .toc-block .toc {
+      background: white;
+      border-radius: 16px;
+      padding: 1.6rem;
+      margin: 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+    }
+    .toc-block .toc h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #5a4a66;
+      border: none;
+    }
+    .introduction-block > p {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    /* ——— ОСТАЛЬНЫЕ СТИЛИ БЕЗ ИЗМЕНЕНИЙ ——— */
     .title-line1, .title-line2 { display: block; }
     .title-line2 { margin-top: 0.3rem; }
 
@@ -75,20 +123,6 @@
       margin: 1.6rem 0;
     }
 
-    .toc {
-      background: white;
-      border-radius: 16px;
-      padding: 1.6rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-      border: 1px solid #ddd;
-    }
-    .toc h2 {
-      margin-top: 0;
-      font-size: 1.4rem;
-      color: #5a4a66;
-      border: none;
-    }
     .toc ul {
       list-style: none;
       padding: 0;
@@ -101,7 +135,6 @@
       font-weight: 500;
     }
 
-    /* ЛОКАЛЬНЫЕ изображения — без внешних ссылок */
     .content-img {
       width: 100%;
       height: auto;
@@ -162,10 +195,13 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 1.9rem; }
+      .hero-block h1 { font-size: 1.9rem; }
       .part-title { font-size: 1.65rem; }
       .final-statement { font-size: 1.3rem; }
-      .part-block { padding: 1.7rem; }
+      .part-block,
+      .hero-block,
+      .toc-block,
+      .introduction-block { padding: 1.7rem; }
       .content-img { max-height: 320px; }
     }
   </style>
@@ -401,6 +437,7 @@
   </script>
 </body>
 </html>
+
 
 
 
