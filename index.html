@@ -30,14 +30,62 @@
       padding: 0 1.5rem;
     }
 
-    h1 {
+    /* ——— НОВЫЕ СТИЛИ ДЛЯ ЦВЕТНЫХ БЛОКОВ ЗАГОЛОВКА, ОГЛАВЛЕНИЯ И ВВЕДЕНИЯ ——— */
+    .hero-block {
+      background: #fff8f3;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #f2e9e4;
       text-align: center;
+    }
+    .toc-block {
+      background: #f0f6ff;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e0e8f0;
+    }
+    .introduction-block {
+      background: #f9f6ff;
+      padding: 2.3rem;
+      border-radius: 18px;
+      margin: 2.6rem 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid #e6e0f0;
+    }
+    .hero-block .content-img {
+      margin: 1.8rem auto;
+    }
+    .hero-block h1 {
+      margin: 1.6rem 0 0;
+      color: #5a4a66;
       font-size: 2.3rem;
-      margin: 2.2rem 0 1.8rem;
-      color: #4a4245;
       font-weight: 700;
       line-height: 1.25;
     }
+    .toc-block .toc {
+      background: white;
+      border-radius: 16px;
+      padding: 1.6rem;
+      margin: 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+    }
+    .toc-block .toc h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #5a4a66;
+      border: none;
+    }
+    .introduction-block > p {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    /* ——— ОСТАЛЬНЫЕ СТИЛИ БЕЗ ИЗМЕНЕНИЙ ——— */
     .title-line1, .title-line2 { display: block; }
     .title-line2 { margin-top: 0.3rem; }
 
@@ -75,20 +123,6 @@
       margin: 1.6rem 0;
     }
 
-    .toc {
-      background: white;
-      border-radius: 16px;
-      padding: 1.6rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-      border: 1px solid #ddd;
-    }
-    .toc h2 {
-      margin-top: 0;
-      font-size: 1.4rem;
-      color: #5a4a66;
-      border: none;
-    }
     .toc ul {
       list-style: none;
       padding: 0;
@@ -101,7 +135,6 @@
       font-weight: 500;
     }
 
-    /* ЛОКАЛЬНЫЕ изображения — без внешних ссылок */
     .content-img {
       width: 100%;
       height: auto;
@@ -162,44 +195,51 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 1.9rem; }
+      .hero-block h1 { font-size: 1.9rem; }
       .part-title { font-size: 1.65rem; }
       .final-statement { font-size: 1.3rem; }
-      .part-block { padding: 1.7rem; }
+      .part-block,
+      .hero-block,
+      .toc-block,
+      .introduction-block { padding: 1.7rem; }
       .content-img { max-height: 320px; }
     }
   </style>
+
 </head>
 <body>
-  <div class="container">
+  
+<!-- ЗАГОЛОВОК + ГЛАВНОЕ ИЗОБРАЖЕНИЕ -->
+<div class="hero-block fade-in">
+  <img src="hero.jpg" alt="Духовное соединение" class="content-img">
+  <h1>
+    <span class="title-line1">Сила Вашего Влечения:</span>
+    <span class="title-line2">От Страсти к Просветлению</span>
+  </h1>
+</div>
 
-    <!-- ЗАГЛАВНОЕ ИЗОБРАЖЕНИЕ (загрузите как hero.jpg) -->
-    <img src="hero.jpg" alt="Духовное соединение" class="content-img fade-in">
+<!-- ОГЛАВЛЕНИЕ -->
+<div class="toc-block fade-in">
+  <div class="toc">
+    <h2>Оглавление</h2>
+    <ul>
+      <li><a href="#introduction">Введение</a></li>
+      <li><a href="#part1">Часть 1: Почему возникает такая сильная взаимная связь?</a></li>
+      <li><a href="#part2">Часть 2: Как сублимировать эту энергию кроме секса?</a></li>
+      <li><a href="#part3">Часть 3: Что об этом говорят духовные практики?</a></li>
+      <li><a href="#part4">Часть 4: Тантрические практики и рекомендации мастеров</a></li>
+    </ul>
+  </div>
+</div>
 
-    <h1 class="fade-in">
-      <span class="title-line1">Сила Вашего Влечения:</span>
-      <span class="title-line2">От Страсти к Просветлению</span>
-    </h1>
-
-    <div class="toc fade-in">
-      <h2>Оглавление</h2>
-      <ul>
-        <li><a href="#introduction">Введение</a></li>
-        <li><a href="#part1">Почему возникает такая сильная взаимная связь?</a></li>
-        <li><a href="#part2">Как сублимировать эту энергию кроме секса?</a></li>
-        <li><a href="#part3">Что об этом говорят духовные практики?</a></li>
-        <li><a href="#part4">Тантрические практики и рекомендации мастеров</a></li>
-      </ul>
-    </div>
-
-    <!-- Введение -->
-    <div id="introduction" class="fade-in">
-      <p>Вы знакомы с состоянием, когда одно присутствие другого человека вызывает мощный, почти магнитный отклик во всем вашем существе? Это не просто страсть.<br>
-      Это — признак редкого энергетического резонанса , когда мужская и женская сущности вступают в глубочайший диалог, создавая постоянный ток жизненной силы ( праны ) между ними. На физическом плане это проявляется как непрекращающееся взаимное влечение — отголосок изначальной космической игры.<br>
-      Тантра видит в этом не то, что требует обуздания, а  зов Шивы (сознания) и Шакти (энергии)  внутри нас, стремящихся к воссоединению для творения и преображения. Это призыв к путешествию за пределы физического удовольствия — к состоянию единства, где два человека становятся проводниками божественной силы.<br>
-      Тантра не подавляет эту необузданную энергию, а дает инструменты, чтобы превратить ее в источник творчества, осознанной любви и духовного прорыва.<br>
-      Это очень глубокий и важный вопрос, который затрагивает и физиологию, и психологию, и духовные аспекты человеческих отношений. Давайте разберем все по порядку.</p>
-    </div>
+<!-- ВВЕДЕНИЕ -->
+<div id="introduction" class="introduction-block fade-in">
+  <p>Вы знакомы с состоянием, когда одно присутствие другого человека вызывает мощный, почти магнитный отклик во всем вашем существе? Это не просто страсть.<br>
+  Это — признак редкого энергетического резонанса , когда мужская и женская сущности вступают в глубочайший диалог, создавая постоянный ток жизненной силы ( праны ) между ними. На физическом плане это проявляется как непрекращающееся взаимное влечение — отголосок изначальной космической игры.<br>
+  Тантра видит в этом не то, что требует обуздания, а  зов Шивы (сознания) и Шакти (энергии)  внутри нас, стремящихся к воссоединению для творения и преображения. Это призыв к путешествию за пределы физического удовольствия — к состоянию единства, где два человека становятся проводниками божественной силы.<br>
+  Тантра не подавляет эту необузданную энергию, а дает инструменты, чтобы превратить ее в источник творчества, осознанной любви и духовного прорыва.<br>
+  Это очень глубокий и важный вопрос, который затрагивает и физиологию, и психологию, и духовные аспекты человеческих отношений. Давайте разберем все по порядку.</p>
+</div>
 
     <!-- ИЗОБРАЖЕНИЕ ПЕРЕД ЧАСТЬЮ 1 (загрузите как part1.jpg) -->
     <img src="part1.jpg" alt="Энергетическое соединение" class="content-img fade-in">
@@ -401,3 +441,4 @@
   </script>
 </body>
 </html>
+
