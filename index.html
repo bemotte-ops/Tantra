@@ -12,17 +12,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-  <style>
+    <style>
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; }
     body {
       font-family: 'Cormorant Garamond', 'Times New Roman', serif;
-      line-height: 1.8;
+      line-height: 1.78;
       color: #3b353d;
       background: #fdfdfd;
       margin: 0;
       padding: 0;
-      font-size: 1.15rem;
+      font-size: 1.12rem; /* Увеличен основной текст */
     }
     .container {
       max-width: 860px;
@@ -30,68 +30,20 @@
       padding: 0 1.5rem;
     }
 
-    /* ——— НОВЫЕ СТИЛИ ДЛЯ ЦВЕТНЫХ БЛОКОВ ЗАГОЛОВКА, ОГЛАВЛЕНИЯ И ВВЕДЕНИЯ ——— */
-    .hero-block {
-      background: #fff8f3;
-      padding: 2.3rem;
-      border-radius: 18px;
-      margin: 2.6rem 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-      border: 1px solid #f2e9e4;
+    h1 {
       text-align: center;
-    }
-    .toc-block {
-      background: #eef5eb;
-      padding: 2.3rem;
-      border-radius: 18px;
-      margin: 2.6rem 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-      border: 1px solid #e0e8f0;
-    }
-    .introduction-block {
-      background: #f9f6ff;
-      padding: 2.3rem;
-      border-radius: 18px;
-      margin: 2.6rem 0;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-      border: 1px solid #e6e0f0;
-    }
-    .hero-block .content-img {
-      margin: 1.8rem auto;
-    }
-    .hero-block h1 {
-      margin: 1.6rem 0 0;
-      color: #5a4a66;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
+      margin: 2.2rem 0 1.8rem;
+      color: #4a4245;
       font-weight: 700;
-      line-height: 1.25;
+      line-height: 1.3;
     }
-    .toc-block .toc {
-      background: white;
-      border-radius: 16px;
-      padding: 1.6rem;
-      margin: 0;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-      border: 1px solid #ddd;
-    }
-    .toc-block .toc h2 {
-      margin-top: 0;
-      font-size: 1.4rem;
-      color: #5a4a66;
-      border: none;
-    }
-    .introduction-block > p {
-      margin: 0;
-      font-size: 1.15rem;
-    }
-
-    /* ——— ОСТАЛЬНЫЕ СТИЛИ БЕЗ ИЗМЕНЕНИЙ ——— */
     .title-line1, .title-line2 { display: block; }
     .title-line2 { margin-top: 0.3rem; }
 
     .part-title {
-      font-size: 1.95rem;
-      margin: 2.5rem 0 1.6rem;
+      font-size: 1.9rem;
+      margin: 2.4rem 0 1.6rem;
       padding: 0.4rem 0 0.8rem;
       color: #5a4a66;
       font-weight: 700;
@@ -104,7 +56,7 @@
     .part-4 .part-title { border-image-source: linear-gradient(to right, #c7a9c5, #d3b9d1, #c7a9c5); }
 
     .part-block {
-      padding: 2.3rem;
+      padding: 2.2rem;
       border-radius: 18px;
       margin: 2.6rem 0;
       box-shadow: 0 6px 20px rgba(0,0,0,0.04);
@@ -117,12 +69,26 @@
 
     .sub-block {
       background: white;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.4rem;
       margin: 1.6rem 0;
     }
 
+    .toc {
+      background: white;
+      border-radius: 16px;
+      padding: 1.6rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    .toc h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #5a4a66;
+      border: none;
+    }
     .toc ul {
       list-style: none;
       padding: 0;
@@ -134,51 +100,53 @@
       color: #6a5a7c;
       font-weight: 500;
     }
+    .toc a:hover { color: #a38caa; }
 
+    /* Все изображения — проверенные, рабочие */
     .content-img {
       width: 100%;
-      height: auto;
-      max-height: 440px;
+      max-height: 420px;
       object-fit: cover;
       border-radius: 16px;
       margin: 2.6rem 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       display: block;
     }
 
     p, ul {
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.25rem;
     }
-    ul { padding-left: 1.6rem; }
+    ul { padding-left: 1.5rem; }
     li { margin-bottom: 0.6rem; }
 
+    /* Жирный для подзаголовков в пунктах */
     .sub-block p strong,
     .sub-block li strong {
       font-weight: 600;
     }
 
+    /* Ключевые моменты — выделены жирным в тексте */
     .key-point {
       font-weight: 700;
       color: #5a4a66;
     }
 
+    /* Финальное предложение */
     .final-statement {
       font-style: italic;
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       text-align: center;
-      margin: 2.8rem 0;
-      padding: 1.4rem;
-      color: #eef5eb;
+      margin: 2.5rem 0;
+      padding: 1.2rem;
+      color: #6a5a7c;
       font-weight: 600;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
-      background: #fdf9f5;
-      border-radius: 12px;
     }
 
     .fade-in {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(12px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
     .fade-in.appear {
@@ -195,14 +163,11 @@
     }
 
     @media (max-width: 600px) {
-      .hero-block h1 { font-size: 1.9rem; }
-      .part-title { font-size: 1.65rem; }
-      .final-statement { font-size: 1.3rem; }
-      .part-block,
-      .hero-block,
-      .toc-block,
-      .introduction-block { padding: 1.7rem; }
-      .content-img { max-height: 320px; }
+      h1 { font-size: 1.85rem; }
+      .part-title { font-size: 1.6rem; }
+      .final-statement { font-size: 1.25rem; }
+      .part-block { padding: 1.6rem; }
+      .content-img { max-height: 300px; }
     }
   </style>
 </head>
@@ -375,6 +340,12 @@
         Эти практики можно выполнять на разных этапах: от простого сидения друг напротив друга до полноценного соития. Ключ — в постепенном освоении.</p>
       </div>
 
+     <div class="sub-block">
+        <p><strong>Этап 1: Подготовка и Создание Пространства</strong><br>
+        1. <strong>Создание Мандалы:</strong> Практикуйте в чистом, тихом, приятно пахнущем месте. Зажгите свечу, используйте благовония. Это место становится вашим священным пространством, алтарем, где вы — божества Шива и Шакти.<br>
+        2. <strong>Очищение Намерения (Санкальпа):</strong> Сядьте друг напротив друга. Возьмитесь за руки, закройте глаза. Внутренне задайте намерение. Не "мы хотим получить удовольствие", а "да направим эту энергию к свету осознанности, на благо всех существ" или "да познаем в тебе божественное". Это фундамент всей практики.</p>
+      </div>
+
       <div class="sub-block">
         <p><strong>Этап 2: Практики Без Физического Контакта (Основополагающие)</strong><br>
         <strong>Практика 1: Синхронизация Дыхания (Йони- и Лингам- mudra в метафорическом смысле)</strong><br>
@@ -397,7 +368,21 @@
         · <strong>Дыхание и визуализация:</strong> Один партнер на вдохе представляет, как вбирает энергию из руки на своем сердце (от партнера), пропускает ее через свое тело и на выдохе посылает через руку на спине партнера в него. Второй партнер делает то же самое, но в противофазе. Получается, что энергия течет по кругу: вверх по спине одного и вниз по груди другого, создавая непрерывный поток.<br>
         · <strong>Совет мастера:</strong> "Не заставляй энергию течь. Пригласи ее, и наблюдай, как она сама начнет двигаться по созданному тобой каналу".</p>
       </div>
-      
+
+      <div class="sub-block">
+        <p><strong>Этап 4: Практики с Близостью (Йони- и Лингам- Пуджа — ПОЧИТАНИЕ)</strong><br>
+        <span class="key-point">КРАЙНЕ ВАЖНО:</span> Это не предварительные ласки. Это самостоятельные, полноценные медитативные практики. Цель — не возбуждение, а осознанное почитание божественного в теле партнера.<br>
+        · <strong>Как делать (общая схема):</strong><br>
+        1. Партнеры по очереди выступают в роли "дающего" (пуджари) и "принимающего" (божество).<br>
+        2. "Принимающий" ложится в удобную позу, полностью расслабляется и становится "алтарем". Его/ее задача — просто принимать, чувствовать, быть свидетелем, без ожиданий.<br>
+        3. "Дающий" садится рядом с благоговением. Практика начинается с медитации, дыхания, установления связи.<br>
+        4. "Дающий" может начать с массажа стоп, голеней, живота, груди — всего тела, кроме гениталий. Используйте масло. Каждое прикосновение — это поклонение.<br>
+        5. <strong>Почитание Йони / Лингама:</strong> Когда энергия подготовлена, "дающий" с тем же благоговением, как если бы он прикасался к священной статуе, переносит внимание на гениталии партнера. Прикосновения очень медленные, нежные, медитативные. Полное отсутствие цели "возбудить". Цель — осознать эту область как источник творящей силы Вселенной, как святыню.<br>
+        6. <strong>Наблюдение за энергией:</strong> "Принимающий" наблюдает за ощущениями, не стремясь к оргазму. "Дающий" наблюдает за своими ощущениями и энергией, текущей через его руки.<br>
+        7. <strong>Завершение:</strong> Практика завершается не оргазмом, а чувством полного насыщения, покоя и благодарности. Партнеры обнимаются, делятся ощущениями.<br>
+        · <strong>Совет мастера:</strong> "Когда ты касаешься Йони, ты касаешься истока всех миров. Когда ты почитаешь Лингам, ты поклоняешься столпу сознания. Делай это с тем же трепетом, с каким зажигаешь свечу в храме".</p>
+      </div>
+
       <div class="sub-block">
         <p><strong>Этап 5: Практика Соития (Маитуна)</strong><br>
         Это вершина, к которой нужно долго готовиться.<br>
@@ -408,6 +393,7 @@
         4. <strong>Сдерживание оргазма (особенно для мужчины):</strong> Мужчина учится распознавать "точку невозврата" и с помощью дыхания, бандх (корневой замок — Мула Бандха) и сознания направлять энергию вверх, избегая эякуляции. Эякуляция в классической Тантре часто считается потерей энергии, тогда как ее подъем — это достижение.<br>
         5. <strong>Завершение:</strong> После длительной практики (30-90 минут) партнеры могут испытать непроизвольные, волнообразные "сухие" (без эякуляции) оргазмы всего тела, или состояние глубокого покоя и единства, которое гораздо сильнее генитального оргазма. Энергия не "выбрасывается", а растворяется в теле, питая его.</p>
       </div>
+
 
       <div class="sub-block">
         <p><strong>Рекомендации на пути Тантры</strong><br>
@@ -442,6 +428,7 @@
   </script>
 </body>
 </html>
+
 
 
 
